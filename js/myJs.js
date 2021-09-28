@@ -28,7 +28,7 @@ function firstQuestion() {
 
 // switch button position
 function switchButton() {
-    var audio = new Audio('sound/duck quack.mp3');
+    var audio = new Audio('soundd/duck quack.mp3');
     audio.play();
     var leftNo = $('#no').css("left");
     var topNO = $('#no').css("top");
@@ -41,7 +41,7 @@ function switchButton() {
 }
 // move random button póition
 function moveButton() {
-    var audio = new Audio('sound/quack.mp3');
+    var audio = new Audio('soundd/quack.mp3');
     audio.play();
     if (screen.width <= 600) {
         var x = Math.random() * 300;
@@ -93,7 +93,7 @@ function textGenerate() {
 
 // show popup
 $('#yes').click(function () {
-    var audio = new Audio('sound/ting.mp3');
+    var audio = new Audio('soundd/ting.mp3');
     audio.play();
     Swal.fire({
         title: 'Nói cho tớ lí do cậu thích tớ đi :vvvv',
@@ -102,14 +102,8 @@ $('#yes').click(function () {
         padding: '3em',
         html: "<input type='text' class='form-control' id='txtReason' onmousemove=textGenerate()  placeholder='Đừng có dối lòng nhé'>",
         background: '#fff url("assets/iput-bg.jpg")',
-        backdrop: `
-              rgba(0,0,123,0.4)
-              url("assets/giphy2.gif")
-              left top
-              no-repeat
-            `,
         showCancelButton: true,
-        cancelButtonText: "Thôi ngại lắmmm :<",
+        cancelButtonText: "Thôi ngại lắmmm :<",        
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
         confirmButtonColor: '#fe8a71',
@@ -133,6 +127,3 @@ $('#yes').click(function () {
     })
 })
 
-$( document ).ready(function() {
-    $('.audio')[0].play();
-});
